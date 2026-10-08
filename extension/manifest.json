@@ -4,6 +4,8 @@
   "version": "0.1.0",
   "description": "Explica la interfaz de la página localmente.",
   "permissions": [
+    "activeTab",
+    "scripting",
     "sidePanel",
     "storage"
   ],
