@@ -1,5 +1,11 @@
-# Fixtures
+# Fixtures de prueba
 
-Guarda páginas HTML autocontenidas para pruebas reproducibles, junto con metadatos JSON de licencia, fuente, fecha y etiquetas revisadas. No incluyas cookies, tokens, nombres, correos ni otros datos personales. Verifica permisos y términos antes de guardar contenido de terceros.
+Las páginas HTML aquí guardadas son sintéticas, autocontenidas y no dependen de red ni contienen datos personales. El nombre y este README describen las etiquetas: `prechecked-basic.html` contiene casillas premarcadas para boletín/marketing y seguro; `clean-form.html` sirve como ejemplo negativo.
 
-Formato futuro: slug/page.html y slug/labels.json. Las etiquetas conservan patrón, elemento/evidencia, confianza y revisor. Incluye ejemplos negativos limpios y adversos. Hito 0 aún no incluye fixtures de producto.
+Para servirlas en localhost y permitir que corra el content script, ejecuta:
+
+```sh
+pnpm fixtures
+```
+
+Abre `http://localhost:4179/prechecked-basic.html` o `http://localhost:4179/clean-form.html`. El puerto se configura mediante `FIXTURES_PORT`. Al agregar páginas de terceros, documenta licencia/fuente y elimina datos personales; las fixtures actuales no los contienen.
