@@ -10,4 +10,4 @@ La extensión conserva localmente los metadatos mínimos de la página activa. E
 - Confusión entre contenido y privilegios: el content script solo usa mensajería; el worker valida emisor y conserva únicamente datos de sesión.
 
 ## Límites
-Los permisos se limitan a sidePanel, storage y localhost/127.0.0.1. El aislamiento de Chromium reduce el acceso al contexto JS, pero el sitio controla el DOM. El chequeo estático no es completo: APIs nuevas u ofuscación requieren revisión y pruebas futuras.
+Los permisos son `sidePanel`, `storage`, `activeTab` y `scripting`, además del acceso de host a localhost/127.0.0.1 para la prueba de mensajería. `activeTab` concede acceso temporal solo después de invocar la extensión sobre la pestaña, y el respaldo del panel lee título y URL. El aislamiento de Chromium reduce el acceso al contexto JS, pero el sitio controla el DOM. El chequeo estático no es completo: APIs nuevas u ofuscación requieren revisión y pruebas futuras.
