@@ -1,0 +1,14 @@
+name: Nuevo patrón
+description: Propón un patrón oscuro con señales verificables.
+title: "[Patrón]: "
+labels: [pattern]
+body:
+  - type: textarea
+    attributes:
+      label: Definición y taxonomía
+      description: Incluye categoría Brignull/Gray/Mathur.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Señales, falsos positivos y ejemplos

@@ -1,0 +1,14 @@
+name: Falso positivo
+description: Una detección parece incorrecta.
+title: "[Falso positivo]: "
+labels: [false-positive]
+body:
+  - type: input
+    attributes:
+      label: Patrón marcado
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Evidencia no sensible
+      description: No incluyas datos personales ni información de sesión.

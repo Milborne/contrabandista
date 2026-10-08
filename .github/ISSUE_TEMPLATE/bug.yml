@@ -1,0 +1,14 @@
+name: Error
+description: Informa de un fallo reproducible.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: textarea
+    attributes:
+      label: Qué ocurrió
+      description: Pasos y resultado esperado/real.
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Navegador y versión
