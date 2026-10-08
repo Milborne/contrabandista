@@ -18,6 +18,7 @@ Node.js 22.12 o superior (Node 24 LTS recomendado) y pnpm 11.
     pnpm lint
     pnpm typecheck
     pnpm test
+    pnpm exec playwright install chromium  # una sola vez para preparar el navegador e2e
     pnpm test:e2e
     pnpm build
 
