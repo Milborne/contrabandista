@@ -22,7 +22,11 @@ Node.js 22.12 o superior (Node 24 LTS recomendado) y pnpm 11.
     pnpm test:e2e
     pnpm build
 
-En Chrome, Edge o Brave abre chrome://extensions, activa Modo de desarrollador, elige Cargar descomprimida y selecciona dist/. En Hito 0, el content script solo coincide con http://localhost y http://127.0.0.1 para las pruebas. Abre allí una página y usa el botón de la extensión para abrir el panel lateral.
+Para probar las páginas sintéticas en localhost, ejecuta `pnpm fixtures` y abre `http://localhost:4179/prechecked-basic.html` o `http://localhost:4179/clean-form.html`. El content script sigue restringido a `localhost` y `127.0.0.1`. El panel lista hallazgos con evidencia y confianza; Resaltar dibuja un contorno temporal.
+
+Si Playwright Chromium no está instalado localmente, se puede usar Edge mediante la ruta de su ejecutable en `PLAYWRIGHT_CHROMIUM_EXECUTABLE`; CI instala y usa Chromium. En PowerShell: `$env:PLAYWRIGHT_CHROMIUM_EXECUTABLE = 'C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe'; pnpm test:e2e`.
+
+En Chrome, Edge o Brave abre `chrome://extensions`, activa Modo de desarrollador, elige Cargar descomprimida y selecciona `dist/`.
 
 Consulta [research/README.md](research/README.md) para el entorno Python.
 
